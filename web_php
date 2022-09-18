@@ -1,0 +1,5 @@
+//softDeletes
+Route::get('posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts.index');
+Route::delete('posts/{id}', [App\Http\Controllers\PostController::class, 'destroy'])->name('posts.destroy');
+Route::get('posts/restore/{id}', [App\Http\Controllers\PostController::class, 'restore'])->name('posts.restore');
+Route::get('posts/restore-all', [App\Http\Controllers\PostController::class, 'restoreAll'])->name('posts.restoreAll');
